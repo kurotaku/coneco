@@ -6,12 +6,19 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundler
+/.env
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+
+/node_modules
+/yarn-error.log
+
+.byebug_history
 
 # Ignore uploaded files in development
 /storage/*
@@ -22,5 +29,13 @@
 /public/assets
 .byebug_history
 
+# Ignore uploaded images
+/public/uploads/*
+/public/assets/*
+/config/deploy/*
+
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+
