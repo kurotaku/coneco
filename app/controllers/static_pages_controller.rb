@@ -4,5 +4,6 @@ class StaticPagesController < ApplicationController
 
 		@posts = Post.all
 		@post = Post.new
+    @post.pictures.build
 	end
 end
