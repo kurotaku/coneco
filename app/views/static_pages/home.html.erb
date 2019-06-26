@@ -10,9 +10,10 @@
 	<% @posts.each do |post| %>
 		<li>
 			<%= post.content %>
-			<% post.pictures.each do |picture| %>
-				<%= image_tag picture.image.url, class: 'thumb' %>
-			<% end %>		
+			<%= image_tag post.image.url, class: 'thumb' %>
+			<%# post.pictures.each do |picture| %>
+				<%#= image_tag picture.image.url, class: 'thumb' %>
+			<%# end %>		
 		</li>
 	<% end %>
 </ul>
@@ -31,12 +32,17 @@
     <%= f.text_field :content, class: 'form-control' %>
   </div>
 
-	<%= f.fields_for :pictures do |a| %>
+<!-- 	<%= f.fields_for :pictures do |a| %>
   	<div class="form-group">
 			<%= a.label :image, '画像' %><br />
 			<%= a.file_field :image %>
 		</div>
-  <% end %>
+  <% end %> -->
+
+  <div class="form-group">
+		<%= f.label :image, '画像' %><br />
+		<%= f.file_field :image %>
+	</div>
 
     
   <%= f.submit '登録する', class: 'btn btn-primary btn-block' %>
