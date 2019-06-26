@@ -10,7 +10,9 @@
 	<% @posts.each do |post| %>
 		<li>
 			<%= post.content %>
-			<%= image_tag post.image.url, class: 'thumb' %>
+			<% if post.image.presence %>
+				<%= image_tag post.image.url, class: 'thumb' %>
+			<% end %>
 			<%# post.pictures.each do |picture| %>
 				<%#= image_tag picture.image.url, class: 'thumb' %>
 			<%# end %>		
