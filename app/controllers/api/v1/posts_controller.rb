@@ -14,7 +14,7 @@ class Api::V1::PostsController < ApplicationController
   def create
     post = Post.new(post_params)
     if post.save
-      render json: { status: 'SUCCESS', message: 'loaded the post', data: post }
+      render json: { status: 'SUCCESS', message: 'saved the post', data: post }
     else
       render json: { status: 'ERROR', message: 'post not saved', data: post.errors }
     end
